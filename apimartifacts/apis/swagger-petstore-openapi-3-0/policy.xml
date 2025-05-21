@@ -1,0 +1,33 @@
+<!--
+    - Policies are applied in the order they appear.
+    - Position <base/> inside a section to inherit policies from the outer scope.
+    - Comments within policies are not preserved.
+-->
+<!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+<policies>
+	<!-- Throttle, authorize, validate, cache, or transform the requests -->
+	<inbound>
+		<base />
+		<set-query-parameter name="x-product-name" exists-action="override">
+			<value>@(context.Product?.Name ?? "none")</value>
+		</set-query-parameter>
+		<set-query-parameter name="x-product-name" exists-action="override">
+			<value>@(context.Product?.Name ?? "none")</value>
+		</set-query-parameter>
+		<set-header name="x-request-received-time" exists-action="override">
+			<value>{{TimeNow}}</value>
+		</set-header>
+	</inbound>
+	<!-- Control if and how the requests are forwarded to services  -->
+	<backend>
+		<base />
+	</backend>
+	<!-- Customize the responses -->
+	<outbound>
+		<base />
+	</outbound>
+	<!-- Handle exceptions and customize error responses  -->
+	<on-error>
+		<base />
+	</on-error>
+</policies>

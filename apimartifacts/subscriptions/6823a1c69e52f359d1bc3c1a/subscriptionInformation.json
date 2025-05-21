@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "starter",
+    "scope": "/subscriptions/a7fbff9d-456b-4e54-b0ae-e02269c684e7/resourceGroups/RG-Temporal_Taller_APIM_User4_ricardo.reyes.m/providers/Microsoft.ApiManagement/service/APIM-RicardoReyesM/products/starter",
+    "allowTracing": false,
+    "ownerId": "/subscriptions/a7fbff9d-456b-4e54-b0ae-e02269c684e7/resourceGroups/RG-Temporal_Taller_APIM_User4_ricardo.reyes.m/providers/Microsoft.ApiManagement/service/APIM-RicardoReyesM/users/6823a0874634611548160c05",
+    "state": "active"
+  }
+}

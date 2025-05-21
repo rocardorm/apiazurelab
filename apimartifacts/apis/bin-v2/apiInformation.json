@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "path": "binsuf",
+    "apiRevision": "2",
+    "apiRevisionDescription": "caching revision",
+    "apiVersion": "v2",
+    "apiVersionSetId": "/subscriptions/a7fbff9d-456b-4e54-b0ae-e02269c684e7/resourceGroups/RG-Temporal_Taller_APIM_User4_ricardo.reyes.m/providers/Microsoft.ApiManagement/service/APIM-RicardoReyesM/apiVersionSets/6824f283e8592a55e88fef75",
+    "authenticationSettings": {},
+    "description": "Ok bin",
+    "isCurrent": true,
+    "displayName": "Bin",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://httpbin.org/",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

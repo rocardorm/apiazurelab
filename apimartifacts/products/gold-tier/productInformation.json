@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "Gold Tier",
+    "description": "Oh O.O",
+    "approvalRequired": false,
+    "state": "published",
+    "subscriptionRequired": true
+  }
+}

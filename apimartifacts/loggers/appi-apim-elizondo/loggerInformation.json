@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "loggerType": "applicationInsights",
+    "credentials": {
+      "instrumentationKey": "{{Logger-Credentials--68250c3a4634611548160f3b}}"
+    },
+    "description": "test",
+    "isBuffered": true,
+    "resourceId": "/subscriptions/a7fbff9d-456b-4e54-b0ae-e02269c684e7/resourceGroups/RG-Temporal_Taller_APIM_User5_elizondo/providers/microsoft.insights/components/appi-apim-elizondo"
+  }
+}
