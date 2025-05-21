@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "path": "testmock",
+    "apiRevision": "1",
+    "authenticationSettings": {
+      "oAuth2": {
+        "authorizationServerId": "oauth-authorizationcodeflow"
+      }
+    },
+    "description": "",
+    "isCurrent": true,
+    "displayName": "test-api2",
+    "protocols": [
+      "https"
+    ],
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

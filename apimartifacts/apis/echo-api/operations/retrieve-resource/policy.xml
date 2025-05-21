@@ -1,0 +1,35 @@
+<!--
+    - Policies are applied in the order they appear.
+    - Position <base/> inside a section to inherit policies from the outer scope.
+    - Comments within policies are not preserved.
+-->
+<!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+<policies>
+	<!-- Throttle, authorize, validate, cache, or transform the requests -->
+	<inbound>
+		<base />
+		<send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
+			<set-url>https://kv-dev-sc-hol-rrm-01.vault.azure.net/secrets/secret-rrm/1edd6ebe16a54dd291c68d088b9267f6/?api-version=7.0</set-url>
+			<set-method>GET</set-method>
+			<authentication-managed-identity resource="https://vault.azure.net" />
+		</send-request>
+		<set-variable name="secret-rrm" value="@{
+            var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
+            return "/people/" + secret["value"].ToString() + "/";
+        }" />
+		<!-- <rewrite-uri template="@((string)context.Variables["secret-rrm"])" />-->
+	</inbound>
+	<!-- Control if and how the requests are forwarded to services  -->
+	<backend>
+		<base />
+	</backend>
+	<!-- Customize the responses -->
+	<outbound>
+		<base />
+		<set-body>@((string)context.Variables["secret-rrm"])</set-body>
+	</outbound>
+	<!-- Handle exceptions and customize error responses  -->
+	<on-error>
+		<base />
+	</on-error>
+</policies>

@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "loggerType": "azureEventHub",
+    "credentials": {
+      "name": "evhns-dev-sc-testlab-rrm-02/evh-logger-dev-sc-testlab-rrm-02",
+      "connectionString": "{{Logger-Credentials--682525d84634611548160f4f}}"
+    },
+    "description": "adding a new logger",
+    "isBuffered": true
+  }
+}
