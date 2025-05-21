@@ -15,7 +15,7 @@
 		</send-request>
 		<set-variable name="secret-rrm" value="@{
             var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
-            return "/people/" + secret["value"].ToString() + "/";
+            return "/dogos/" + secret["value"].ToString() + "/";
         }" />
 		<!-- <rewrite-uri template="@((string)context.Variables["secret-rrm"])" />-->
 	</inbound>
